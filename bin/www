@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('pw-mat-2023-1:server');
+var debug = require('debug')('ps-mat-2023-1:server');
 var http = require('http');
 
 /**
