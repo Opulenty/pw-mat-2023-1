@@ -50,6 +50,7 @@ controller.retrieveOne = async (req, res) => {
   }
 }
 
+<<<<<<< HEAD
 controller.update = async (req, res) => {
   try {
     const response = await User.update(
@@ -95,3 +96,6 @@ controller.delete = async (req, res) => {
 }
 
 module.exports = controller
+=======
+module.exports = controller
+>>>>>>> 650ee2f4e47e1910ca3c742cd6075db8316edd75

@@ -1,2 +1,2 @@
-# pw-mat-2023-1
-Repositório da disciplina Eletiva I - Programação Web, 4º semestre matutino ADS Fatec Franca 2023/1
+# ps-mat-2023-1
+Repositório da disciplina Eletiva II - Programação de Scripts, 5º semestre ADS matutino Fatec Franca 2023/1

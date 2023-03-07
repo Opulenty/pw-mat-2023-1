@@ -1,6 +1,11 @@
 require('dotenv').config()
+<<<<<<< HEAD
 module.exports= 
 {
+=======
+
+module.exports = {
+>>>>>>> 650ee2f4e47e1910ca3c742cd6075db8316edd75
   "development": {
     "username": process.env.DB_USERNAME,
     "password": process.env.DB_PASSWORD,
@@ -34,4 +39,8 @@ module.exports=
       "underscoredAll": true
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 650ee2f4e47e1910ca3c742cd6075db8316edd75
