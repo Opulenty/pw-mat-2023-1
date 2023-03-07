@@ -7,16 +7,13 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER(100),
-      },
-      id: {
-        type: Sequelize.INTEGER(100),
+        type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(100)
       },
       email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(100)
       },
       verified_email: {
         type: Sequelize.BOOLEAN
@@ -25,16 +22,16 @@ module.exports = {
         type: Sequelize.BOOLEAN
       },
       phone: {
-        type: Sequelize.STRING(20),
+        type: Sequelize.STRING(20)
       },
       password: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(200)
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE
       }
