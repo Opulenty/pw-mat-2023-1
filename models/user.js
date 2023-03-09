@@ -14,18 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   User.init({
-<<<<<<< HEAD
-    id: DataTypes.INTEGER,
-    name: DataTypes.STRING(100),
-    email: DataTypes.STRING(100),
-    verified_email: DataTypes.BOOLEAN,
-    is_admin: DataTypes.BOOLEAN,
-    phone: DataTypes.STRING(20),
-    password: DataTypes.STRING(50),
-  }, {
-    sequelize,
-    modelName: 'User',
-=======
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -62,7 +50,6 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'User',
     tableName: 'users'
->>>>>>> 650ee2f4e47e1910ca3c742cd6075db8316edd75
   });
   return User;
 };
