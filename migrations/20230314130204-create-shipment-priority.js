@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('channels', {
+    await queryInterface.createTable('shipment_priorities', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -12,11 +12,6 @@ module.exports = {
       description: {
         type: Sequelize.STRING(30),
         allowNull: false
-      },
-      commission_fee: {
-        type: Sequelize.DECIMAL(18, 2),
-        allowNull: false,
-        default: 0
       },
       createdAt: {
         allowNull: false,
@@ -29,6 +24,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('channels');
+    await queryInterface.dropTable('shipment_priorities');
   }
 };

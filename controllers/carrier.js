@@ -1,6 +1,6 @@
 // Importar o model correspondente ao controller
 
-const { User } = require('../models')
+const { Carrier } = require('../models')
 
 const controller = {}
 
@@ -15,7 +15,7 @@ delete: exclui um registro
 
 controller.create = async (req, res) => {
     try{
-        await User.create(req.body)
+        await Carrier.create(req.body)
         //HTTP 201: Created
         res.status(201).end()
     }
@@ -26,7 +26,7 @@ controller.create = async (req, res) => {
 
 controller.retrieve = async (req, res) => {
     try{
-        const data = await User.findAll()
+        const data = await Carrier.findAll()
         //HTTP 200: OK (implicito)
         res.send(data)
     }
@@ -37,7 +37,7 @@ controller.retrieve = async (req, res) => {
 
 controller.retrieveOne = async (req, res) => {
     try{
-        const data = await User.findByPk(req.params.id)
+        const data = await Carrier.findByPk(req.params.id)
         //HTTP 200: OK (implicito)
         if(data) res.send(data)
         
@@ -50,7 +50,7 @@ controller.retrieveOne = async (req, res) => {
 
 controller.update = async (req,res) => {
     try{
-        const response = await User.update(
+        const response = await Carrier.update(
             req.body,
             {where : { id: req.params.id }}
         )
@@ -72,7 +72,7 @@ controller.update = async (req,res) => {
 
 controller.delete = async (req, res) => {
     try{
-        const response = await User.destroy(
+        const response = await Carrier.destroy(
             { where: { id: req.params.id } }
         )
 

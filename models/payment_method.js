@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   class PaymentMethod extends Model {
     /**
      * Helper method for defining associations.
-     * This method is not a part of DataTypes lifecycle.
+     * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
@@ -24,8 +24,16 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(30)
     },
     operator_fee: {
-      type: DataTypes.DECIMAL(18, 2)
+      type: DataTypes.DECIMAL(18,2)
     },
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE
+    }
   }, {
     sequelize,
     modelName: 'PaymentMethod',

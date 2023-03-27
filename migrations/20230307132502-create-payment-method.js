@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.STRING(30)
       },
       operator_fee: {
-        type: Sequelize.DECIMAL(18, 2)
+        type: Sequelize.DECIMAL(18,2)
       },
       createdAt: {
         allowNull: false,

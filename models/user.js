@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING(100),
@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     verified_email: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
-      default: false    // Valor padrão do campo
+      default: false
     },
     is_admin: {
       type: DataTypes.BOOLEAN,
@@ -49,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'User',
-    tableName: 'users'
+    tableName: 'users' //tabela com o U minusculo
   });
   return User;
 };

@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Channel extends Model {
+  class OrderTag extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of DataTypes lifecycle.
@@ -13,26 +13,25 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Channel.init({
+  OrderTag.init({
     id: {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    description: {
-      type: DataTypes.STRING(30),
-      allowNull:false
+    order_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     },
-    comission_fee: {
-      type: DataTypes.DECIMAL(18, 2),
-      allowNull: false,
-      default:0
+    tag_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   }, {
     sequelize,
-    modelName: 'Channel',
-    tableName: 'channels'
+    modelName: 'OrderTag',
+    tableName: 'order_tags'
   });
-  return Channel;
+  return OrderTag;
 };
