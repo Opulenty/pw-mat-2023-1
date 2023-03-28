@@ -1,17 +1,6 @@
-// Importar o model correspondente ao controller
-
 const { PaymentMethod } = require('../models')
 
 const controller = {}
-
-/* 
-Métodos CRUD do controller
-create: cria um novo registro
-retrieve: lista(recupera) todos os registros
-retriaveOne: lista (recupera) apenas um registro
-update: atualiza um registro
-delete: exclui um registro
-*/
 
 controller.create = async (req, res) => {
     try{

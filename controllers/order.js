@@ -1,10 +1,12 @@
-const { ShipmentPriority } = require('../models')
+
+
+const { Order } = require('../models')
 
 const controller = {}
 
 controller.create = async (req, res) => {
     try{
-        await ShipmentPriority.create(req.body)
+        await Order.create(req.body)
         //HTTP 201: Created
         res.status(201).end()
     }
@@ -15,7 +17,7 @@ controller.create = async (req, res) => {
 
 controller.retrieve = async (req, res) => {
     try{
-        const data = await ShipmentPriority.findAll()
+        const data = await Order.findAll()
         //HTTP 200: OK (implicito)
         res.send(data)
     }
@@ -26,7 +28,7 @@ controller.retrieve = async (req, res) => {
 
 controller.retrieveOne = async (req, res) => {
     try{
-        const data = await ShipmentPriority.findByPk(req.params.id)
+        const data = await Order.findByPk(req.params.id)
         //HTTP 200: OK (implicito)
         if(data) res.send(data)
         
@@ -39,10 +41,11 @@ controller.retrieveOne = async (req, res) => {
 
 controller.update = async (req,res) => {
     try{
-        const response = await ShipmentPriority.update(
+        const response = await Order.update(
             req.body,
             {where : { id: req.params.id }}
         )
+
         if(response[0] > 0) {
             //HTTP 204: NO CONTENT
             res.status(204).end()
@@ -59,7 +62,7 @@ controller.update = async (req,res) => {
 
 controller.delete = async (req, res) => {
     try{
-        const response = await ShipmentPriority.destroy(
+        const response = await Order.destroy(
             { where: { id: req.params.id } }
         )
 

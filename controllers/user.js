@@ -1,17 +1,7 @@
-// Importar o model correspondente ao controller
-
 const { User } = require('../models')
 
 const controller = {}
 
-/* 
-Métodos CRUD do controller
-create: cria um novo registro
-retrieve: lista(recupera) todos os registros
-retriaveOne: lista (recupera) apenas um registro
-update: atualiza um registro
-delete: exclui um registro
-*/
 
 controller.create = async (req, res) => {
     try{
@@ -54,8 +44,6 @@ controller.update = async (req,res) => {
             req.body,
             {where : { id: req.params.id }}
         )
-
-        //response retorna um vetor. O primeiro elemento do vetor indica quantos registros foram afetados pelo update
         if(response[0] > 0) {
             //HTTP 204: NO CONTENT
             res.status(204).end()
